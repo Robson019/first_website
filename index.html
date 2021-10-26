@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Império Coffee</title>
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="assets/fonts/style.css" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+
+    <div class="imagem">
+      <img id="imgbg" src="cafe_background.jpg" alt="café com logo" />
+    </div>
+
+    <!-- BORDA 1 -->
+    <div class="pai">
+      <section class="contexto">
+        <!-- LOGO, SLOGAN E FRASE -->
+        <div class="encomendafrase">
+          <h1 class="logo"><ins>Império Coffee</ins></h1>
+          <h2 class="slogan"><i>"O seu dia começa aqui!"</i></h2>
+          <p class="frase" id="frase">
+            A <b>melhor</b> loja de café do Nordeste.<br />
+            Entregamos em <b>toda</b> a região
+          </p>
+        </div>
+        <!-- BOTÕES -->
+        <div class="encomendabotoes">
+          <button type="button" onclick="escolherencomenda()" id="sumir">
+            <i class="icon-phone"></i>
+            Encomenda
+          </button>
+          <div class="bots">
+            <button
+              onclick="location.href='https://api.whatsapp.com/send?phone=+5599999999999&text=Oi!_Gostaria_de_encomendar_café.'"
+              type="button"
+              class="hide"
+              id="zapzap"
+            >
+              <i class="icon-whatsapp"></i>Whatsapp
+            </button>
+            <br />
+            <button
+              onclick="location.href='https://mail.google.com'"
+              type="button"
+              class="hide"
+              id="email"
+            >
+              <i class="icon-mail"></i>E-mail
+            </button>
+            <br />
+            <button
+              type="button"
+              onclick="voltando()"
+              class="hide pbot"
+              id="voltar"
+            >
+              <i class="icon-arrow-up seta"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <div class="divisor"></div>
+      <form action="teste" method="post">
+        <!-- SUGESTÃO -->
+        <section class="contexto">
+
+          <h1 class="slogan topico respslogan"><ins>Sugestões</ins></h1>
+
+          <div class="sugestaoall">
+            <div id="sp1">
+              <label for="nome" class="frase sugestion">Nome:</label>
+              <input type="text" name="nome" id="nome" class="psug" />
+            </div>
+
+            <p id="nomef" class="frase"></p>
+
+            <div id="sp2">
+              <label for="mail" class="frase sugestion">E-mail:</label>
+              <input type="email" name="email" id="inpemail" class="psug" />
+            </div>
+
+            <p id="emailf" class="frase"></p>
+
+            <div id="sp3">
+              <label for="sugestao" class="frase sugestion">Sugestão:</label>
+              <textarea class="areasug" name="texto" id="msg" cols="30" rows="10"></textarea>
+            </div>
+
+            <p id="sugf" class="frase"></p>
+
+          </div>
+
+            <p id="feedback" class="frase hide">
+              <strong>Obrigado pela sugestão, volte sempre!</strong><br />
+            </p>
+
+          <button type="button" class="envsug" id="envbuttonsug" onclick="sugestao()">
+            Enviar
+          </button>
+          
+        </section>
+      </form>
+      <div class="divisor"></div>
+      <form action="teste2" method="post">
+        
+        <!-- QUIZ -->
+        <section class="contexto">
+
+          <h1 class="slogan topico"><ins>Café Perfeito</ins></h1>
+
+          <div class="quizall">
+            <div id="qp1">
+              <p class="frase">
+                <strong>1. Como você gosta do seu café?</strong><br />
+                <input type="radio" name="radprefer" id="gosto1" />
+                <label for="gosto1" class="ask">Amargo</label><br />
+                <input type="radio" name="radprefer" id="gosto2" />
+                <label for="gosto2" class="ask">Com leite</label><br />
+                <input type="radio" name="radprefer" id="gosto3" />
+                <label for="gosto3" class="ask">Gelado</label>
+              </p>
+            </div>
+            <div id="rq1"></div>
+
+            <div id="qp2">
+              <p class="frase">
+                <strong>2. Com que frequência você bebe café?</strong><br />
+                <input type="radio" name="radprefer2" id="gosto4" />
+                <label for="gosto4" class="ask">Sempre!</label><br />
+                <input type="radio" name="radprefer2" id="gosto5" />
+                <label for="gosto5" class="ask">Às vezes...</label><br />
+                <input type="radio" name="radprefer2" id="gosto6" />
+                <label for="gosto6" class="ask">Quase nunca.</label>
+              </p>
+            </div>
+
+            <p id="rq2" class="frase"></p>
+
+            <div id="qp3">
+              <p class="frase">
+                <strong>3. Gostaria de ir à nossa loja?</strong><br />
+                <input type="radio" name="radprefer3" id="gosto7" />
+                <label for="gosto7" class="ask">Claro!</label><br />
+                <input type="radio" name="radprefer3" id="gosto8" />
+                <label for="gosto8" class="ask">Acho que não...</label>
+              </p>
+            </div>
+          
+          </div>
+
+          <button type="button" class="envquiz" onclick="quiz()" id="quizbot">
+            Verificar
+          </button>
+
+        </section>
+      </form>
+    </div>
+    <footer class="frase">
+      <p>&copy; Robson Alves Gominho</p>
+      <p><i>Sistemas de Informação</i></p>
+      <p><i>Disciplina: INTW</i></p>
+    </footer>
+    <!-- SCRYPTS -->
+    <script src="main.js"></script>
+  </body>
+</html>
